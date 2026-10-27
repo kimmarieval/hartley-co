@@ -1,0 +1,118 @@
+/* ========================================
+   HARTLEY & CO. — CART DRAWER
+======================================== */
+
+#cart-drawer .theme-drawer__dialog {
+  background: #f8f6f2;
+  color: #292823;
+}
+
+#cart-drawer .theme-drawer__header,
+#cart-drawer .cart-drawer__content,
+#cart-drawer .cart-drawer__summary {
+  background: #f8f6f2;
+}
+
+/* Cart heading */
+
+#cart-drawer .theme-drawer__title {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #292823;
+}
+
+#cart-drawer .theme-drawer__badge {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+}
+
+/* Product information */
+
+#cart-drawer .cart-items__title {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #292823;
+}
+
+#cart-drawer .cart-items__details {
+  color: #77736d;
+}
+
+#cart-drawer .cart-items__price {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #51483e;
+}
+
+#cart-drawer .cart-items__media-container {
+  background: #eae6df;
+}
+
+/* Dividers */
+
+#cart-drawer .cart-items__table-row {
+  border-color: #dedbd5;
+}
+
+#cart-drawer .cart__summary-totals {
+  border-color: #dedbd5;
+}
+
+/* Quantity controls */
+
+#cart-drawer .quantity-selector {
+  border-color: #dedbd5;
+  border-radius: 3px;
+}
+
+/* Subtotal */
+
+#cart-drawer .cart__total-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+#cart-drawer .cart__total-value {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Checkout button */
+
+#cart-drawer .cart__checkout-button {
+  background: #51483e;
+  border: 1px solid #51483e;
+  border-radius: 3px;
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease;
+}
+
+#cart-drawer .cart__checkout-button:not(:disabled):hover {
+  background: #75685b;
+  border-color: #75685b;
+}
+
+#cart-drawer .cart__checkout-button:focus-visible {
+  outline: 2px solid #51483e;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cart-drawer .cart__checkout-button {
+    transition: none;
+  }
+}

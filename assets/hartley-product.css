@@ -104,3 +104,47 @@
     transition: none;
   }
 }
+
+/* ========================================
+   HARTLEY & CO. — PRODUCT BUTTONS
+======================================== */
+
+body:has(.hartley-details) .add-to-cart-button {
+  background: #51483e;
+  color: #ffffff;
+  border: 1px solid #51483e;
+  border-radius: 3px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+body:has(.hartley-details) .add-to-cart-button:not(:disabled):hover {
+  background: #75685b;
+  border-color: #75685b;
+  transform: translateY(-1px);
+}
+
+body:has(.hartley-details) .add-to-cart-button:focus-visible {
+  outline: 2px solid #51483e;
+  outline-offset: 3px;
+}
+
+body:has(.hartley-details) .add-to-cart-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(.hartley-details) .add-to-cart-button {
+    transition: none;
+  }
+}
