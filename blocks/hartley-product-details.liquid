@@ -2,6 +2,7 @@
 
 <div class="hartley-details" {{ block.shopify_attributes }}>
 
+  <!-- PRODUCT DETAILS -->
   <details class="hartley-details__item">
     <summary class="hartley-details__summary">
       <span>Product Details</span>
@@ -9,10 +10,15 @@
     </summary>
 
     <div class="hartley-details__content">
-      {{ block.settings.product_details }}
+      {% if product.metafields.custom.product_details != blank %}
+        {{ product.metafields.custom.product_details | metafield_tag }}
+      {% else %}
+        {{ block.settings.product_details }}
+      {% endif %}
     </div>
   </details>
 
+  <!-- DIMENSIONS & CARE -->
   <details class="hartley-details__item">
     <summary class="hartley-details__summary">
       <span>Dimensions &amp; Care</span>
@@ -20,10 +26,15 @@
     </summary>
 
     <div class="hartley-details__content">
-      {{ block.settings.care_details }}
+      {% if product.metafields.custom.dimensions_care != blank %}
+        {{ product.metafields.custom.dimensions_care | metafield_tag }}
+      {% else %}
+        {{ block.settings.care_details }}
+      {% endif %}
     </div>
   </details>
 
+  <!-- SHIPPING & RETURNS -->
   <details class="hartley-details__item">
     <summary class="hartley-details__summary">
       <span>Shipping &amp; Returns</span>
