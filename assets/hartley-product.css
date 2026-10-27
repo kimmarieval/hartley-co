@@ -1,0 +1,106 @@
+/* Hartley & Co. Product Details */
+
+.hartley-details {
+  width: 100%;
+  margin-top: 18px;
+  border-top: 1px solid #dedbd5;
+}
+
+.hartley-details__item {
+  border-bottom: 1px solid #dedbd5;
+}
+
+.hartley-details__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 0;
+  cursor: pointer;
+  list-style: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #37352f;
+}
+
+.hartley-details__summary::-webkit-details-marker {
+  display: none;
+}
+
+.hartley-details__summary:focus-visible {
+  outline: 2px solid #867a6e;
+  outline-offset: 4px;
+}
+
+.hartley-details__icon {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.hartley-details__icon::before,
+.hartley-details__icon::after {
+  content: "";
+  position: absolute;
+  background: #37352f;
+  transition: transform 250ms ease;
+}
+
+.hartley-details__icon::before {
+  width: 14px;
+  height: 1px;
+  top: 7px;
+  left: 0;
+}
+
+.hartley-details__icon::after {
+  width: 1px;
+  height: 14px;
+  top: 0;
+  left: 7px;
+}
+
+.hartley-details__item[open]
+.hartley-details__icon::after {
+  transform: rotate(90deg);
+}
+
+.hartley-details__content {
+  padding: 0 20px 25px 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #77736d;
+}
+
+.hartley-details__content p {
+  margin: 0 0 12px;
+}
+
+.hartley-details__content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 749px) {
+  .hartley-details__summary {
+    padding: 20px 0;
+  }
+
+  .hartley-details__content {
+    padding-bottom: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hartley-details__icon::before,
+  .hartley-details__icon::after {
+    transition: none;
+  }
+}

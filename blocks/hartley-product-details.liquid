@@ -1,0 +1,69 @@
+{{ 'hartley-product.css' | asset_url | stylesheet_tag }}
+
+<div class="hartley-details" {{ block.shopify_attributes }}>
+
+  <details class="hartley-details__item">
+    <summary class="hartley-details__summary">
+      <span>Product Details</span>
+      <span class="hartley-details__icon" aria-hidden="true"></span>
+    </summary>
+
+    <div class="hartley-details__content">
+      {{ block.settings.product_details }}
+    </div>
+  </details>
+
+  <details class="hartley-details__item">
+    <summary class="hartley-details__summary">
+      <span>Dimensions &amp; Care</span>
+      <span class="hartley-details__icon" aria-hidden="true"></span>
+    </summary>
+
+    <div class="hartley-details__content">
+      {{ block.settings.care_details }}
+    </div>
+  </details>
+
+  <details class="hartley-details__item">
+    <summary class="hartley-details__summary">
+      <span>Shipping &amp; Returns</span>
+      <span class="hartley-details__icon" aria-hidden="true"></span>
+    </summary>
+
+    <div class="hartley-details__content">
+      {{ block.settings.shipping_details }}
+    </div>
+  </details>
+
+</div>
+
+{% schema %}
+{
+  "name": "Hartley Product Details",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "product_details",
+      "label": "Product details",
+      "default": "<p>A thoughtfully curated piece designed to bring timeless beauty to your home.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "care_details",
+      "label": "Dimensions and care",
+      "default": "<p>Refer to the individual product specifications for measurements and care instructions.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "shipping_details",
+      "label": "Shipping and returns",
+      "default": "<p>Shipping and return information will be provided when this demonstration store becomes available for orders.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hartley Product Details"
+    }
+  ]
+}
+{% endschema %}

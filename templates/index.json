@@ -95,6 +95,19 @@
         "padding-block-end": 72
       }
     },
+    "hartley_collection_bcpDiN": {
+      "type": "hartley-collection",
+      "name": "Hartley Collection",
+      "settings": {
+        "eyebrow": "THE EDIT",
+        "heading": "Objects for Considered Living",
+        "description": "<p>A curated selection of timeless pieces, thoughtfully chosen for the spaces we call home.</p>",
+        "collection": "the-curated-collection",
+        "product_limit": 4,
+        "show_button": true,
+        "button_label": "Explore the Collection"
+      }
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -297,6 +310,7 @@
   },
   "order": [
     "hero_jVaWmY",
+    "hartley_collection_bcpDiN",
     "product_list_fa6P9H"
   ]
 }
