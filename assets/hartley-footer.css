@@ -1,0 +1,96 @@
+/* ========================================
+   HARTLEY & CO. — FOOTER
+======================================== */
+
+/* Footer background */
+
+.shopify-section[id*="__footer_"] {
+  background-color: #f3f0ea;
+  color: #292823;
+}
+
+.shopify-section[id*="__footer_"] .section-background {
+  background-color: #f3f0ea;
+}
+
+/* Newsletter heading */
+
+.shopify-section[id*="__footer_"] h2 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(32px, 3vw, 44px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #292823;
+}
+
+/* Newsletter description */
+
+.shopify-section[id*="__footer_"] p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #77736d;
+}
+
+/* Email field */
+
+/* Newsletter email field */
+
+.shopify-section[id*="__footer_"] input[type="email"] {
+  background: transparent;
+  border: none;
+  border-radius: 100px 0 0 100px;
+  color: #292823;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+
+  outline: none;
+}
+
+.shopify-section[id*="__footer_"] input[type="email"]:focus {
+  outline: none;
+}
+
+.shopify-section[id*="__footer_"] input[type="email"]::placeholder {
+  color: #817c73;
+  opacity: 1;
+}
+/* Footer links */
+
+.shopify-section[id*="__footer_"] a {
+  color: #51483e;
+  transition: color 250ms ease;
+}
+
+.shopify-section[id*="__footer_"] a:hover {
+  color: #978676;
+}
+
+/* Copyright */
+
+.shopify-section[id*="__footer_utilities_"] {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  color: #817c73;
+}
+
+/* Mobile */
+
+@media (max-width: 749px) {
+  .shopify-section[id*="__footer_"] h2 {
+    font-size: 34px;
+  }
+
+  .shopify-section[id*="__footer_"] input[type="email"] {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shopify-section[id*="__footer_"] a,
+  .shopify-section[id*="__footer_"] input[type="email"] {
+    transition: none;
+  }
+}

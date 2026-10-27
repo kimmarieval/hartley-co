@@ -1,0 +1,97 @@
+/* ========================================
+   HARTLEY & CO. — COLLECTION PAGE
+======================================== */
+
+/* Collection heading */
+
+body:has(.main-collection-grid) h1 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(46px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #292823;
+}
+
+/* Product grid */
+
+.main-collection-grid .product-grid__item {
+  min-width: 0;
+}
+
+.main-collection-grid product-card {
+  display: block;
+}
+
+.main-collection-grid .product-card__content {
+  background: transparent;
+}
+
+/* Product images */
+
+.main-collection-grid product-card img {
+  transition: transform 650ms ease;
+}
+
+@media (hover: hover) {
+  .main-collection-grid product-card:hover img {
+    transform: scale(1.035);
+  }
+}
+
+/* Product titles */
+
+.main-collection-grid .product-grid__item
+.product-card__content .text-block,
+.main-collection-grid .product-grid__item
+.product-card__content .text-block a {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #292823;
+  text-decoration: none;
+}
+
+/* Product prices */
+
+.main-collection-grid .product-grid__item .price {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #77736d;
+}
+
+/* Filters */
+
+.main-collection-grid .facets {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #51483e;
+}
+
+.main-collection-grid .facets button,
+.main-collection-grid .facets select {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 749px) {
+  body:has(.main-collection-grid) h1 {
+    font-size: clamp(42px, 11vw, 56px);
+  }
+
+  .main-collection-grid .product-grid__item
+  .product-card__content .product-title {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-collection-grid product-card img {
+    transition: none;
+  }
+}
